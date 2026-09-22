@@ -14,3 +14,20 @@ if (revealEls.length) {
     revealEls.forEach((el) => el.classList.add('is-visible'));
   }
 }
+
+/* Formulario -> arma el mensaje y abre WhatsApp con el procedimiento elegido */
+const quoteForm = document.getElementById('quoteForm');
+if (quoteForm) {
+  quoteForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('qfName').value.trim();
+    const procedure = document.getElementById('qfProcedure').value;
+    const message = document.getElementById('qfMessage').value.trim();
+
+    let text = `Hola, soy ${name}. Me interesa información sobre: ${procedure}.`;
+    if (message) text += ` ${message}`;
+
+    const url = `https://wa.me/573127576340?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank', 'noopener');
+  });
+}
