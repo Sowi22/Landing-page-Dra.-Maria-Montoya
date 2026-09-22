@@ -172,4 +172,10 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.2; colo
   .hero__stats { gap: 22px; }
   .hero__photo-badge { left: 10px; bottom: -14px; padding: 12px 16px; }
   .procedures-box { padding: 24px; }
+
+  /* En movil, las credenciales vuelven a verse como etiquetas compactas (sin icono ni universidad) */
+  .hero__creds { flex-direction: row; flex-wrap: wrap; gap: 8px; }
+  .hero__creds li { padding: 6px 14px; border-radius: 999px; }
+  .hero__creds svg, .hero__creds span { display: none; }
+  .hero__creds strong { font-size: 12px; font-weight: 500; margin-bottom: 0; }
 }
