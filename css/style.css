@@ -102,18 +102,6 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.2; colo
 .about__creds strong { display: block; font-size: 14px; color: var(--wine-dark); margin-bottom: 2px; }
 .about__creds span { font-size: 13px; color: var(--text-muted); }
 
-/* SERVICIOS */
-.services { padding: 88px 0; }
-.services__cat { margin-bottom: 48px; }
-.services__cat:last-child { margin-bottom: 0; }
-.services__cat-title { font-family: var(--serif); font-style: italic; color: var(--wine); font-size: 20px; margin-bottom: 22px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
-.services__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.service-card { border: 1px solid var(--border); border-radius: 18px; padding: 22px; transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease; }
-.service-card:hover { border-color: var(--wine-light); transform: translateY(-3px); box-shadow: 0 18px 34px rgba(107,31,58,.1); }
-.service-card h3 { font-size: 17px; margin-bottom: 8px; }
-.service-card p { font-size: 13.5px; color: var(--text-muted); margin-bottom: 10px; }
-.service-card__benefit { font-size: 12.5px; color: var(--wine); font-weight: 600; }
-
 /* UBICACIONES */
 .locations { padding: 88px 0; background: var(--cream); }
 .locations__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
@@ -158,14 +146,12 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.2; colo
   .hero__inner { grid-template-columns: 1fr; }
   .hero__photo { order: -1; max-width: 340px; margin: 0 auto; }
   .about__inner { grid-template-columns: 1fr; }
-  .services__grid { grid-template-columns: repeat(2, 1fr); }
   .locations__grid { grid-template-columns: 1fr; }
   .contact__inner { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
   .hero { padding: 40px 0 56px; }
-  .about, .services, .locations, .contact { padding: 56px 0; }
-  .services__grid { grid-template-columns: 1fr; }
+  .about, .locations, .contact { padding: 56px 0; }
   .hero__stats { gap: 22px; }
   .hero__photo-badge { left: 10px; bottom: -14px; padding: 12px 16px; }
 }
