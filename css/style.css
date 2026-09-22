@@ -91,23 +91,20 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.2; colo
 .section-title h2 { font-size: clamp(28px, 1.6vw + 20px, 40px); }
 .section-title p { color: var(--text-muted); margin-top: 14px; font-size: clamp(14.5px, .3vw + 13px, 16.5px); }
 
-/* SOBRE MÍ */
-.about { padding: 88px 0; background: var(--cream); }
-.about__inner { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: start; }
-.about__left p { color: var(--text-muted); margin-bottom: 18px; font-size: 15.5px; }
-.about__creds { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-top: 28px; }
-.about__creds li { display: flex; gap: 14px; align-items: flex-start; background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 16px 18px; }
-.about__creds svg { width: 22px; height: 22px; color: var(--wine); flex-shrink: 0; margin-top: 2px; }
-.about__creds strong { display: block; font-size: 14px; color: var(--wine-dark); margin-bottom: 2px; }
-.about__creds span { font-size: 13px; color: var(--text-muted); }
+/* Credenciales condensadas dentro del Hero (reemplaza las 6 tarjetas de "Sobre mí") */
+.hero__creds { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+.hero__creds li {
+  background: #fff; border: 1px solid var(--border); border-radius: 999px;
+  padding: 6px 14px; font-size: 12px; color: var(--wine-dark); font-weight: 500;
+}
 
-/* Procedimientos: casilla junto a Sobre mí, con videos reales de Instagram */
-.procedures-box { background: #fff; border: 1px solid var(--border); border-radius: 22px; padding: 30px; }
+/* PROCEDIMIENTOS: seccion corta y unica, sin repetir bio/credenciales */
+.procedures-section { padding: 70px 0; background: var(--cream); }
+.procedures-box { background: #fff; border: 1px solid var(--border); border-radius: 22px; padding: 34px; max-width: 900px; margin: 0 auto; }
 .procedures-box h3 { font-size: 19px; margin-bottom: 18px; }
-.procedures-box__videos { display: flex; flex-direction: column; gap: 20px; }
-.video-pair { display: flex; gap: 16px; align-items: flex-start; }
-.video-pair .ig-embed { width: 190px; height: 400px; flex-shrink: 0; }
-.video-pair__text { padding-top: 6px; }
+.procedures-box__videos { display: flex; gap: 20px; }
+.video-pair { display: flex; flex-direction: column; gap: 12px; flex: 1; min-width: 0; }
+.video-pair .ig-embed { width: 100%; max-width: 280px; height: 590px; margin: 0 auto; }
 .video-pair__text strong { display: block; font-size: 14.5px; color: var(--wine-dark); margin-bottom: 6px; }
 .video-pair__text p { font-size: 13px; color: var(--text-muted); }
 
@@ -118,7 +115,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.2; colo
 }
 
 .procedures-box__subtitle { font-size: 15px; margin: 26px 0 14px; padding-top: 22px; border-top: 1px solid var(--border); }
-.featured-procs { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.featured-procs { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 20px; }
 .featured-procs li { display: flex; gap: 12px; align-items: flex-start; }
 .featured-procs__icon {
   width: 32px; height: 32px; border-radius: 10px; flex-shrink: 0;
@@ -166,15 +163,14 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.2; colo
 @media (max-width: 960px) {
   .hero__inner { grid-template-columns: 1fr; }
   .hero__photo { order: -1; max-width: 340px; margin: 0 auto; }
-  .about__inner { grid-template-columns: 1fr; }
   .contact__inner { grid-template-columns: 1fr; }
+  .procedures-box__videos { flex-direction: column; }
+  .featured-procs { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
   .hero { padding: 40px 0 56px; }
-  .about, .contact { padding: 56px 0; }
+  .procedures-section, .contact { padding: 56px 0; }
   .hero__stats { gap: 22px; }
   .hero__photo-badge { left: 10px; bottom: -14px; padding: 12px 16px; }
-  .video-pair { flex-direction: column; }
-  .video-pair .ig-embed { width: 100%; max-width: 280px; height: 590px; margin: 0 auto; }
-  .video-pair__text { padding-top: 0; }
+  .procedures-box { padding: 24px; }
 }
