@@ -102,21 +102,20 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.2; colo
 .about__creds strong { display: block; font-size: 14px; color: var(--wine-dark); margin-bottom: 2px; }
 .about__creds span { font-size: 13px; color: var(--text-muted); }
 
-/* UBICACIONES */
-.locations { padding: 88px 0; background: var(--cream); }
-.locations__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.location-card { background: #fff; border: 1px solid var(--border); border-radius: 22px; padding: 30px; }
-.location-card__icon { width: 44px; height: 44px; border-radius: 12px; background: var(--wine); color: #fff; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
-.location-card__icon svg { width: 22px; height: 22px; }
-.location-card h3 { font-size: 19px; margin-bottom: 10px; }
-.location-card p { font-size: 14px; color: var(--text-muted); margin-bottom: 6px; }
-.location-card__hours { margin: 16px 0; padding: 14px 16px; background: var(--cream); border-radius: 12px; font-size: 13px; color: var(--text-muted); }
-.location-card__hours strong { color: var(--wine-dark); }
-
 /* CONTACTO */
 .contact { padding: 88px 0; }
 .contact__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
 .contact__whatsapp { display: flex; flex-direction: column; gap: 14px; margin-top: 24px; }
+
+/* Ubicaciones, ahora junto al formulario de contacto */
+.contact__locations { display: flex; flex-direction: column; gap: 18px; margin-top: 28px; }
+.location-card { background: #fff; border: 1px solid var(--border); border-radius: 22px; padding: 26px; }
+.location-card__icon { width: 40px; height: 40px; border-radius: 12px; background: var(--wine); color: #fff; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+.location-card__icon svg { width: 20px; height: 20px; }
+.location-card h3 { font-size: 18px; margin-bottom: 8px; }
+.location-card p { font-size: 13.5px; color: var(--text-muted); margin-bottom: 6px; }
+.location-card__hours { margin: 14px 0; padding: 12px 15px; background: var(--cream); border-radius: 12px; font-size: 12.5px; color: var(--text-muted); }
+.location-card__hours strong { color: var(--wine-dark); }
 .contact__whatsapp a { justify-content: flex-start; padding-left: 22px; }
 .contact__social { display: flex; gap: 12px; margin-top: 28px; }
 .contact__social a { width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--wine); transition: background .2s ease, color .2s ease; }
@@ -146,12 +145,11 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.2; colo
   .hero__inner { grid-template-columns: 1fr; }
   .hero__photo { order: -1; max-width: 340px; margin: 0 auto; }
   .about__inner { grid-template-columns: 1fr; }
-  .locations__grid { grid-template-columns: 1fr; }
   .contact__inner { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
   .hero { padding: 40px 0 56px; }
-  .about, .locations, .contact { padding: 56px 0; }
+  .about, .contact { padding: 56px 0; }
   .hero__stats { gap: 22px; }
   .hero__photo-badge { left: 10px; bottom: -14px; padding: 12px 16px; }
 }
