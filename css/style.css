@@ -101,15 +101,15 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.2; colo
 .about__creds strong { display: block; font-size: 14px; color: var(--wine-dark); margin-bottom: 2px; }
 .about__creds span { font-size: 13px; color: var(--text-muted); }
 
-/* Procedimientos: casilla junto a Sobre mí */
+/* Procedimientos: casilla junto a Sobre mí, con videos reales de Instagram */
 .procedures-box { background: #fff; border: 1px solid var(--border); border-radius: 22px; padding: 30px; }
 .procedures-box h3 { font-size: 19px; margin-bottom: 18px; }
-.procedures-box__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
-.procedures-box__tags span {
-  display: inline-block; background: var(--cream); border: 1px solid var(--border); border-radius: 999px;
-  padding: 7px 14px; font-size: 12.5px; color: var(--wine-dark); font-weight: 500;
+.procedures-box__videos { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.ig-embed { position: relative; width: 100%; max-width: 340px; height: 700px; overflow: hidden; border-radius: 12px; }
+.ig-embed iframe {
+  position: absolute !important; top: 0 !important; left: 0 !important;
+  width: 100% !important; height: 100% !important; border: none !important; min-width: 0 !important;
 }
-.procedures-box__note { font-size: 12.5px; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 16px; }
 
 /* CONTACTO */
 .contact { padding: 88px 0; }
@@ -125,11 +125,6 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.2; colo
 .locations-box__hours { display: block; font-size: 12px; color: var(--text-muted); margin-bottom: 6px; }
 .locations-box__item a { font-size: 12.5px; font-weight: 600; color: var(--wine); text-decoration: none; }
 .locations-box__item a:hover { text-decoration: underline; }
-
-.contact__social { display: flex; gap: 12px; margin-top: 28px; }
-.contact__social a { width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--wine); transition: background .2s ease, color .2s ease; }
-.contact__social a:hover { background: var(--wine); color: #fff; }
-.contact__social svg { width: 19px; height: 19px; }
 
 .contact-form { background: var(--cream); border: 1px solid var(--border); border-radius: 24px; padding: 32px; }
 .contact-form h3 { font-size: 21px; margin-bottom: 18px; }
