@@ -31,3 +31,27 @@ if (quoteForm) {
     window.open(url, '_blank', 'noopener');
   });
 }
+
+/* Carrusel de videos: puntos de navegación */
+const videoTrack = document.getElementById('videoTrack');
+const videoDots = document.querySelectorAll('#videoDots .dot');
+if (videoTrack && videoDots.length) {
+  videoTrack.addEventListener('scroll', () => {
+    const slides = [...videoTrack.children];
+    const center = videoTrack.scrollLeft + videoTrack.clientWidth / 2;
+    let closest = 0;
+    let min = Infinity;
+    slides.forEach((slide, i) => {
+      const dist = Math.abs(slide.offsetLeft + slide.offsetWidth / 2 - center);
+      if (dist < min) { min = dist; closest = i; }
+    });
+    videoDots.forEach((dot, i) => dot.classList.toggle('is-active', i === closest));
+  }, { passive: true });
+
+  videoDots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      const slide = videoTrack.children[i];
+      videoTrack.scrollTo({ left: slide.offsetLeft, behavior: 'smooth' });
+    });
+  });
+}
