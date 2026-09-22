@@ -93,14 +93,23 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.2; colo
 
 /* SOBRE MÍ */
 .about { padding: 88px 0; background: var(--cream); }
-.about__inner { display: grid; grid-template-columns: .85fr 1.15fr; gap: 56px; align-items: start; }
-.about__text p { color: var(--text-muted); margin-bottom: 18px; font-size: 15.5px; }
-.about__text p:last-child { margin-bottom: 0; }
-.about__creds { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+.about__inner { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: start; }
+.about__left p { color: var(--text-muted); margin-bottom: 18px; font-size: 15.5px; }
+.about__creds { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-top: 28px; }
 .about__creds li { display: flex; gap: 14px; align-items: flex-start; background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 16px 18px; }
 .about__creds svg { width: 22px; height: 22px; color: var(--wine); flex-shrink: 0; margin-top: 2px; }
 .about__creds strong { display: block; font-size: 14px; color: var(--wine-dark); margin-bottom: 2px; }
 .about__creds span { font-size: 13px; color: var(--text-muted); }
+
+/* Procedimientos: casilla junto a Sobre mí */
+.procedures-box { background: #fff; border: 1px solid var(--border); border-radius: 22px; padding: 30px; }
+.procedures-box h3 { font-size: 19px; margin-bottom: 18px; }
+.procedures-box__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.procedures-box__tags span {
+  display: inline-block; background: var(--cream); border: 1px solid var(--border); border-radius: 999px;
+  padding: 7px 14px; font-size: 12.5px; color: var(--wine-dark); font-weight: 500;
+}
+.procedures-box__note { font-size: 12.5px; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 16px; }
 
 /* CONTACTO */
 .contact { padding: 88px 0; }
