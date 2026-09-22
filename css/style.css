@@ -91,12 +91,12 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.2; colo
 .section-title h2 { font-size: clamp(28px, 1.6vw + 20px, 40px); }
 .section-title p { color: var(--text-muted); margin-top: 14px; font-size: clamp(14.5px, .3vw + 13px, 16.5px); }
 
-/* Credenciales condensadas dentro del Hero (reemplaza las 6 tarjetas de "Sobre mí") */
-.hero__creds { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
-.hero__creds li {
-  background: #fff; border: 1px solid var(--border); border-radius: 999px;
-  padding: 6px 14px; font-size: 12px; color: var(--wine-dark); font-weight: 500;
-}
+/* Credenciales dentro del Hero, con el estilo de tarjeta original */
+.hero__creds { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
+.hero__creds li { display: flex; gap: 14px; align-items: flex-start; background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 16px 18px; }
+.hero__creds svg { width: 22px; height: 22px; color: var(--wine); flex-shrink: 0; margin-top: 2px; }
+.hero__creds strong { display: block; font-size: 14px; color: var(--wine-dark); margin-bottom: 2px; }
+.hero__creds span { font-size: 13px; color: var(--text-muted); }
 
 /* PROCEDIMIENTOS: seccion corta y unica, sin repetir bio/credenciales */
 .procedures-section { padding: 70px 0; background: var(--cream); }
